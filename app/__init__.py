@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from dotenv import load_dotenv
+from dotenv import load_dotenv 
 import os
 db = SQLAlchemy()
 migrate = Migrate()
@@ -27,5 +27,3 @@ def create_app(test_config=None):
     app.register_blueprint(planets_bp)
     
     return app
-
-

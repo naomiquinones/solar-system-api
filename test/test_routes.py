@@ -23,10 +23,10 @@ def test_get_single_planet(client,add_two_planets):
 def test_get_no_planet_return_404(client):
     response = client.get("/planets/55")
 
-     # Assert
+    # Assert
     assert response.status_code == 404
     assert response.get_data(as_text= True) == "Planet not found"
-   
+
 def test_return_valid_data_for_all_planet(client,add_two_planets):
     response = client.get("/planets")
     response_body = response.get_json()
